@@ -1,24 +1,44 @@
-# README
+<!--# <ここにアプリ名を入力>-->
+　園山幹生絵画
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+◎サイト概要
 
-Things you may want to cover:
+  ・サイトテーマ
 
-* Ruby version
+　　サイトに載ってある園山幹夫が描いた油絵の画像を確認して頂いて、
+　　興味を抱いて貰う事を目的としております。
 
-* System dependencies
+　　他の人に園山幹夫の名前を知って頂いて、当人と交流して頂ければ良いかと考え、
+　　こちらのサイトを作成しました。
 
-* Configuration
+  ・テーマを選んだ理由
 
-* Database creation
+  　以前よりホームページ作成する事を意識しておりました。
+  　この度は皆様のご要望にお応えする形で作らせて頂きました。
 
-* Database initialization
+  　具体的な要望として、ネット注文に対応して欲しいとお客様から
+  　言われておりました。そちらに応える意味も込めて、こちらのテーマにしました。
 
-* How to run the test suite
+  ・ターゲットユーザ
 
-* Services (job queues, cache servers, search engines, etc.)
+　　園山幹生の絵画に興味がある方。
 
-* Deployment instructions
+　・主な利用シーン
 
-* ...
+　　お客様が私どものホームページにてネット注文をする時。
+
+　　園山幹生の経歴や今までの活動を閲覧したい時。
+
+## 設計書
+
+
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。

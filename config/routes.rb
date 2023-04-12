@@ -5,10 +5,11 @@ Rails.application.routes.draw do
     sessions: "public/sessions"
   }
 
-  root to: "homes#top"
+
 
   # 会員用2
   scope module: :public do
+    root :to => "homes#top"
   end
 
   # 管理者用

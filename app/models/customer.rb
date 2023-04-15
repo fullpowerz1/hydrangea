@@ -4,6 +4,7 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+    has_many :orders, dependent: :destroy
     has_one_attached :profile_image
 
     # ユーザー用の画像を表示できるように

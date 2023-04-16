@@ -1,0 +1,57 @@
+<header class="atiti">
+  <!--後々バナーを入れる。-->
+
+  <!--リンク一覧-->
+  <div class="container mb--5 d-inline">
+    <div class="row">
+
+      <!--adminのログイン画面とログイン後じゃない場合-->
+      <% unless request.path_info == '/admin/sign_in' || admin_signed_in? %>
+        <div class="col-md-5 offset-md-5 d-flex align-items-center">
+          <!--ボタンの右揃え-->
+          <div class="text-right">
+            <!--ボタン4つ-->
+            <button type="button" class="btn btn-light mt-2">
+              <%= link_to "ご挨拶",about_path, class: "text-dark" %>
+            </button>
+
+            <button type="button" class="btn btn-light mt-2">
+              <%= link_to "活動記録",schedule_path, class: "text-dark" %>
+            </button>
+
+            <button type="button" class="btn btn-light mt-2">
+              <%= link_to "絵画一覧",pictures_path, class: "text-dark" %>
+            </button>
+
+            <button type="button" class="btn btn-light mt-2">
+              <%= link_to "経歴一覧",history_path, class: "text-dark" %>
+            </button>
+
+          </div>
+        </div>
+        <!--adminのログイン-->
+        <% elsif admin_signed_in? %>
+          <div class="col-md-5 offset-md-5 d-flex align-items-center">
+            <!--ロゴ入れるかも-->
+
+            <!--ボタンの右揃え-->
+            <div class="text-right">
+              <!--ボタン2つ-->
+              <button type="button" class="btn btn-light mt-1">
+                <%= link_to "絵画登録",edit_admin_picture_path, class: "text-dark" %>
+              </button>
+
+              <button type="button" class="btn btn-light mt-1">
+                <%= link_to "ログアウト",destroy_admin_session_path, method: :delete, class: "text-dark" %>
+              </button>
+
+            </div>
+          </div>
+        <!--何もなし-->
+        <% else %>
+      <% end %>
+      <!--ここまでif文-->
+    </div>
+  </div>
+
+</header>

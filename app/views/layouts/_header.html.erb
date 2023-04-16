@@ -29,26 +29,26 @@
 
           </div>
         </div>
-        <!--adminのログイン-->
-        <% elsif admin_signed_in? %>
-          <div class="col-md-5 offset-md-5 d-flex align-items-center">
-            <!--ロゴ入れるかも-->
+      <% end %>
 
-            <!--ボタンの右揃え-->
-            <div class="text-right">
-              <!--ボタン2つ-->
-              <button type="button" class="btn btn-light mt-1">
-                <%= link_to "絵画登録",edit_admin_picture_path, class: "text-dark" %>
-              </button>
+      <!--adminのログイン-->
+      <% if admin_signed_in? %>
+        <div class="col-md-5 offset-md-5 d-flex align-items-center">
+        <!--ロゴ入れるかも-->
 
-              <button type="button" class="btn btn-light mt-1">
-                <%= link_to "ログアウト",destroy_admin_session_path, method: :delete, class: "text-dark" %>
-              </button>
+        <!--ボタンの右揃え-->
+          <div class="text-right">
+            <!--ボタン2つ-->
+            <button type="button" class="btn btn-light mt-1">
+              <%= link_to "絵画登録",edit_admin_picture_path, class: "text-dark" %>
+            </button>
 
-            </div>
+            <button type="button" class="btn btn-light mt-1">
+              <%= link_to "ログアウト",destroy_admin_session_path, method: :delete, class: "text-dark" %>
+            </button>
+
           </div>
-        <!--何もなし-->
-        <% else %>
+        </div>
       <% end %>
       <!--ここまでif文-->
     </div>

@@ -1,2 +1,46 @@
-<h1>サンプル</h1>
-<p>Find me in app/views/public/homes/top.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+
+      <div class="mx-auto">
+        <!--ボックス-->
+        <div class="mt-5">
+          <!--bootstrapを使用した画像のスライドショー-->
+          <div class="carousel slide" id="sample" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#sample" data-slide-to="0" class="active"></li>
+              <li data-target="#sample" data-slide-to="1"></li>
+              <li data-target="#sample" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner carousel-fade">
+              <div class="carousel-item active">
+                <%= image_tag "main_1.jpg", class: "d-block w-100" %>
+              </div>
+
+              <div class="carousel-item">
+                <%= image_tag "main_4.jpg", class: "d-block w-100" %>
+              </div>
+
+              <div class="carousel-item">
+                <%= image_tag "sample.jpg", class: "d-block w-100" %>
+              </div>
+            </div>
+
+            <a href="#sample" class="carousel-control-prev" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="sr-only">前の画像へ</span>
+            </a>
+
+            <a href="#sample" class="carousel-control-next" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="sr-only">次の画像へ</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

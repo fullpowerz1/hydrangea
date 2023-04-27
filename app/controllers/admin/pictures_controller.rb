@@ -9,5 +9,6 @@ class Admin::PicturesController < ApplicationController
   end
 
   def edit
+    @ore = Ore.find(params[:id])
   end
 end

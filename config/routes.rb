@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   get "admin"=> "admin/homes#top", as: "admin"
 
-  namespace :adimin do
+  namespace :admin do
     resources :pictures, only: [:index,:show,:edit,:new]
   end
 

@@ -22,6 +22,16 @@
            font-size: 38px;
 }
 
+.bunmidasi{
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 2px;
+}
+
+.komoji{
+         font-size: 14px;
+}
+
 .hakari{
         height: 750px;
 }
@@ -52,4 +62,9 @@
 
 .pagination>li {
   margin-right: 20px;
+}
+// ここまでページネーション
+
+.hantengu{
+          border: 3px dashed #CCC;
 }

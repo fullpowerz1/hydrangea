@@ -26,8 +26,30 @@
         height: 750px;
 }
 
+// ページネーション自体のデザイン
 .kanrimidasi{
              font-family: cursive;
              font-size: 50px;
              background-color: rgba(236,109,113,0.3);
+}
+
+// 表示しているページ番号のﾃﾞｻﾞｲﾝ
+.pagination>li>a {
+                    border: none;
+                    color: #696969;
+}
+
+.pagination>.active>a {
+  border-radius: 50%;
+  opacity: 0.7;
+  /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+.pagination>li {
+  margin-right: 20px;
 }

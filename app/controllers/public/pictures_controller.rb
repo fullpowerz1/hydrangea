@@ -5,4 +5,5 @@ class Public::PicturesController < ApplicationController
 
   def show
   end
+
 end

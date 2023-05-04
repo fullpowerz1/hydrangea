@@ -1,2 +1,24 @@
-<h1>Admin::Pictures#new</h1>
-<p>Find me in app/views/admin/pictures/new.html.erb</p>
+<div class="container col-sm-12 col-md-8 col-lg-7 col-xl-7 px-5 px-sm-0 hakari">
+  <div class="row">
+    <h1 class="ml-5 mt-5 mb-3 kanrimidasi">絵画新規登録</h1>
+  </div>
+
+  <div class="row justify-content-end">
+    <div class="col-md-8 px-5 px-sm-0 mx-auto">
+      <%= form_with model: @picture, url: admin_pictures_path, method: :post do |f| %>
+        <div class="form-group row">
+
+          <div class="col-md-3 text-left">
+            <%= f.label :image, "鉱石画像" %>
+          </div>
+
+
+
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</div>

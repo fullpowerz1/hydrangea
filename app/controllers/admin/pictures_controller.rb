@@ -6,9 +6,26 @@ class Admin::PicturesController < ApplicationController
   end
 
   def new
+    @picture = Picture.new
+  end
+
+  def create
+    @picture = Picture.new(picture_params)
+    if @picture.save
+      redirect_to admin_picture_path(@picture)
+    else
+      redirect_to admin_pictures_path
+    end
   end
 
   def edit
-    @ore = Ore.find(params[:id])
+    @picture = Picture.find(params[:id])
   end
+
+  private
+
+  def picture_params
+    params.require(:picture).permit(:order_id, :name, :introduction, :price, :image, :is_active)
+  end
+
 end

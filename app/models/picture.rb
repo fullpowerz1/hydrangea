@@ -1,7 +1,7 @@
 class Picture < ApplicationRecord
 
   has_many :orders, dependent: :destroy
-  has_one_attached :image
+  has_one_attached :picture_image
 
   def get_picture_image(width, height)
     unless picture_image.attached?

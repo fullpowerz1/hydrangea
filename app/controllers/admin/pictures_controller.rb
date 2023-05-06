@@ -1,8 +1,10 @@
 class Admin::PicturesController < ApplicationController
   def index
+    @pictures = Picture.all
   end
 
   def show
+    @picture = Picture.find(params[:id])
   end
 
   def new
@@ -25,7 +27,7 @@ class Admin::PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:order_id, :name, :introduction, :price, :image, :is_active)
+    params.require(:picture).permit(:name, :introduction, :price, :picture_image, :is_active)
   end
 
 end

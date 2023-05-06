@@ -1,23 +1,79 @@
-<div class="container col-sm-12 col-md-8 col-lg-7 col-xl-7 px-5 px-sm-0 hakari">
-  <div class="row">
-    <h1 class="ml-5 mt-5 mb-3 kanrimidasi">絵画新規登録</h1>
+<div class="container">
+  <div class="row my-4">
+    <h1 class="col-9 kanrimidasi text-center">絵画新規登録</h1>
   </div>
 
-  <div class="row justify-content-end">
-    <div class="col-md-8 px-5 px-sm-0 mx-auto">
+  <div class="row">
+    <div class="col-md-8 px-5 px-sm-0">
       <%= form_with model: @picture, url: admin_pictures_path, method: :post do |f| %>
-        <div class="form-group row">
 
+        <!--画像のフォーム-->
+        <div class="form-group row">
           <div class="col-md-3 text-left">
             <%= f.label :image, "鉱石画像" %>
           </div>
 
+          <div class="col-md-9">
+            <%= f.file_field :image, accept: "image/*", required: true %>
+          </div>
+        </div>
 
+        <!--絵画名のフォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :name, "絵画名" %>
+          </div>
 
+          <div class="col-md-9">
+            <%= f.text_field :name, placeholder: "絵画名", required: true, size: "44" %>
+          </div>
+        </div>
+
+        <!--絵画説明フォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :introduction, "絵画説明" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.text_area :introduction, placeholder: "ここに説明文を記述します", required: true, size: "46x10" %>
+          </div>
+        </div>
+
+        <!--絵画価格フォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :price, "税込価格" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.text_area :price, required: true, size: "46" %>
+          </div>
+        </div>
+
+        <!--販売ステータスのフォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            販売ステータス
+          </div>
+
+          <div class="col-md-9">
+            <%= f.radio_button :is_active, true %>
+            <%= f.label :is_active, "販売中" %>
+
+            <%= f.radio_button :is_active, false %>
+            <%= f.label :is_active, "販売停止中" %>
+          </div>
+        </div>
+
+        <!--新規登録ボタン-->
+        <div class="row">
+          <div class="action center-block mx-auto">
+            <%= f.submit "新規登録", class: "btn btn-success btn-lg mb-2" %>
+          </div>
         </div>
 
       <% end %>
-
     </div>
   </div>
 

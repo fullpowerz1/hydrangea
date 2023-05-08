@@ -11,7 +11,7 @@
     <% @pictures.each do |picture| %>
       <div class="mx-3 my-3 text-center">
         <!--ポップアップ機能-->
-        <%= link_to picture.get_picture_image(1500, 1200), "data-lightbox": picture.get_picture_image(1500, 1200) do %>
+        <%= link_to picture.get_picture_image(1500, 1200), "data-lightbox": picture.get_picture_image(200, 140) do %>
           <%= image_tag picture.get_picture_image(200, 140),class: "doyon" %><br>
         <% end %>
 

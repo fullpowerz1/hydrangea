@@ -9,8 +9,8 @@
   <!--画像部分の繰り返し処理-->
   <div class="d-flex flex-wrap items_width">
     <% @pictures.each do |picture| %>
-      <div class="mx-3 my-3">
-        <%= image_tag picture.get_picture_image(200, 160) %><br>
+      <div class="mx-3 my-3 text-center">
+        <%= image_tag picture.get_picture_image(200, 140),class: "doyon" %><br>
         <%= picture.name %>
       </div>
     <% end %>

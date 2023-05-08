@@ -10,7 +10,11 @@
   <div class="d-flex flex-wrap items_width">
     <% @pictures.each do |picture| %>
       <div class="mx-3 my-3 text-center">
-        <%= image_tag picture.get_picture_image(200, 140),class: "doyon" %><br>
+        <!--ポップアップ機能-->
+        <%= link_to picture.get_picture_image(1500, 1200), "data-lightbox": picture.get_picture_image(1500, 1200) do %>
+          <%= image_tag picture.get_picture_image(200, 140),class: "doyon" %><br>
+        <% end %>
+
         <%= picture.name %>
       </div>
     <% end %>

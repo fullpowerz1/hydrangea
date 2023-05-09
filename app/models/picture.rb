@@ -8,6 +8,6 @@ class Picture < ApplicationRecord
       file_path = Rails.root.join('app/assets/images/icon.jpg')
       picture_image.attach(io: File.open(file_path),filename: 'default-image.jpg', content_type: 'image/jpeg')
     end
-      picture_image.variant(resize_to_limit: [width, height]).processed
+      picture_image.variant(resize_to_limit: [width, height], gravity: :center).processed
   end
 end

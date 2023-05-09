@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     # 会員機能
     resources :customers, only: [:show, :edit]
     get 'customers/unsubscribe' => 'customers#unsubscribe'
-    # ここまで会員機能
+    # ここまで会員機能です。
 
     resources :pictures, only: [:index,:show]
 

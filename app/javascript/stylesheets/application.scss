@@ -14,7 +14,7 @@
 .midasi{
         font-family: cursive;
         font-size: 50px;
-        background-color: rgba(147,184,129,0.3);
+        background-color: rgba(147,184,129,0.7);
 }
 
 .submidasi{
@@ -105,4 +105,13 @@
             padding-left: 200px;
 }
 
-// 右クリック禁止
+// メイン画面
+main{
+        padding-top: 10px;
+        padding-bottom: 175px;
+        background-image: url("../images/ajisaitati.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+}

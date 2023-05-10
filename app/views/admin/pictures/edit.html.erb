@@ -1,2 +1,80 @@
-<h1>Admin::Pictures#edit</h1>
-<p>Find me in app/views/admin/pictures/edit.html.erb</p>
+<div class="container">
+  <div class="row my-4">
+    <h1 class="col-9 kanrimidasi text-center">絵画編集</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 px-5 px-sm-0">
+      <%= form_with model: @picture, url: admin_picture_path(@picture) do |f| %>
+
+        <!--画像のフォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :picture_image, "絵画画像" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.file_field :picture_image, accept: "image/*", required: true %>
+          </div>
+        </div>
+
+        <!--絵画名のフォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :name, "絵画名" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.text_field :name, placeholder: "絵画名", required: true, size: "44" %>
+          </div>
+        </div>
+
+        <!--絵画説明フォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :introduction, "絵画説明" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.text_area :introduction, placeholder: "ここに説明文を記述します", required: true, size: "46x10" %>
+          </div>
+        </div>
+
+        <!--絵画価格フォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            <%= f.label :price, "税込価格" %>
+          </div>
+
+          <div class="col-md-9">
+            <%= f.text_area :price, required: true, size: "46" %>
+          </div>
+        </div>
+
+        <!--販売ステータスのフォーム-->
+        <div class="form-group row">
+          <div class="col-md-3 text-left">
+            販売ステータス
+          </div>
+
+          <div class="col-md-9">
+            <%= f.radio_button :is_active, true %>
+            <%= f.label :is_active, "販売中" %>
+
+            <%= f.radio_button :is_active, false %>
+            <%= f.label :is_active, "販売停止中" %>
+          </div>
+        </div>
+
+        <!--新規登録ボタン-->
+        <div class="row">
+          <div class="action center-block mx-auto">
+            <%= f.submit "変更を保存", class: "btn btn-success btn-lg mb-2" %>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+
+</div>

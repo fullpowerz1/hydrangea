@@ -24,6 +24,12 @@ class Admin::PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+  def update
+    @picture = Picture.find(params[:id])
+    @picture.update(picture_params)
+    redirect_to admin_picture_path(@picture)
+  end
+
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy

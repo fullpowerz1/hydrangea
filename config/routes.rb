@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get "admin"=> "admin/homes#top", as: "admin"
 
   namespace :admin do
-    resources :pictures, only: [:index,:show,:edit,:new,:create,:destroy]
+    resources :pictures, only: [:index,:show,:edit,:new,:create,:destroy,:update]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

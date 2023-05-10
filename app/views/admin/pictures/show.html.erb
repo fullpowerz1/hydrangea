@@ -1,2 +1,62 @@
-<h1>Admin::Pictures#show</h1>
-<p>Find me in app/views/admin/pictures/show.html.erb</p>
+<div class="container">
+  <div class="row my-4">
+     <h1 class="col-9 kanrimidasi text-center">絵画詳細</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag @picture.get_picture_image(300,200) %>
+    </div>
+
+    <!--テーブル-->
+    <div class="col-md-7">
+      <table class="table table-hover table-bordered">
+
+        <tbody>
+          <tr>
+            <td class="text-white font-weight-bold atora2 danmari text-center">絵画名</td>
+            <!--半角スペース3つ-->
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td class="haku"><%= @picture.name %></td>
+          </tr>
+
+          <tr>
+            <td class="text-white font-weight-bold atora2 danmari text-center">絵画説明</td>
+            <!--半角スペース3つ-->
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td class="haku"><%= @picture.introduction %></td>
+          </tr>
+
+          <tr>
+            <td class="text-white font-weight-bold atora2 danmari text-center">税込価格</td>
+            <!--半角スペース3つ-->
+            <td>&nbsp;&nbsp;&nbsp;</td>
+            <td class="haku"><%= @picture.price %></td>
+          </tr>
+
+          <tr>
+            <td class="text-white font-weight-bold atora2 danmari text-center">販売ステータス</td>
+            <!--半角スペース3つ-->
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+          <% if @picture.is_active == true %>
+            <td class="text-success font-weight-bold haku">販売中</td>
+          <% else %>
+            <td class="text-danger font-weight-bold haku">販売停止中</td>
+          <% end %>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <!--編集するボタン-->
+      <div class="col-md-3 mx-auto float-left mt-2 katorin">
+        <%= link_to "編集する",edit_admin_picture_path(@picture), class: "btn btn-secondary btn-block mb-3" %>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

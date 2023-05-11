@@ -11,7 +11,7 @@
     <% @pictures.each do |picture| %>
       <div oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;", class="mx-3 my-3 text-center">
         <!--ポップアップ機能-->
-        <%= link_to picture.get_picture_image(1500, 1200), "data-lightbox": picture.get_picture_image(180,140) do %>
+        <%= link_to picture.get_picture_image(1000,1000), "data-lightbox": picture.get_picture_image(180,140) do %>
           <%= image_tag picture.get_picture_image(180, 140), class: "doyon" %><br>
         <% end %>
 

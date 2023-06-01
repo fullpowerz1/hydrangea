@@ -9,10 +9,10 @@
   <!--画像部分の繰り返し処理-->
   <div class="d-flex flex-wrap items_width">
     <% @pictures.each do |picture| %>
-      <div oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;", class="mx-3 my-3 text-center">
+      <div oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;", class="mx-3 my-3 text-center ganba">
         <!--ポップアップ機能-->
         <%= link_to picture.get_picture_image(600,500), "data-lightbox": picture.get_picture_image(180,140) do %>
-          <%= image_tag picture.get_picture_image(180, 140), class: "doyon" %><br>
+          <%= image_tag picture.get_picture_image(180, 140) %><br>
         <% end %>
 
         <%= picture.name %>

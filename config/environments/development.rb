@@ -76,4 +76,11 @@ Rails.application.configure do
 
   config.hosts.clear
   config.active_job.queue_adapter = :inline
+
+  # そのほかの設定
+
+  # ログに画像パスを設定する必要性
+   config.active_storage.service_urls_expire_in = 1.minute # 画像URLの有効期限を設定（任意の時間を指定）
+   config.active_storage.service_logs_enabled = true # 画像のログ出力を有効にする。
+
 end
